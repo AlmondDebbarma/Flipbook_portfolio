@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+  height: 100dvh;
+  width: 100dvw;
+  background: #f0f7f4;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.portfolio-book {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 4px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.page {
+  background: white;
+  padding: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(0,0,0,0.02) 100%);
+  pointer-events: none;
+}
+
+.page-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #2e7d32 #f0f7f4;
+}
+
+.page-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.page-content::-webkit-scrollbar-track {
+  background: #f0f7f4;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+  background-color: #2e7d32;
+  border-radius: 3px;
+}
+
+.cover {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  color: white;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.portfolio-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  max-width: 80%;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #2e7d32;
+  border-radius: 2px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  border: 3px solid #e8f5e9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+}
+
+.experience-container,
+.projects-container,
+.achievements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.experience-item,
+.project-card,
+.achievement-card {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e8f5e9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-item:hover,
+.project-card:hover,
+.achievement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header,
+.project-header,
+.achievement-header {
+  margin-bottom: 0.8rem;
+}
+
+.experience-header h3,
+.project-header h3,
+.achievement-header h3 {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.experience-header h4,
+.project-role {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.period,
+.project-period,
+.achievement-period {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.description,
+.achievement-description {
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.achievements-list,
+.features-list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.achievements-list li,
+.features-list li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: #555;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.achievements-list li::before,
+.features-list li::before {
+  content: "•";
+  color: #2e7d32;
+  position: absolute;
+  left: -1.2rem;
+}
+
+.project-link {
+  display: inline-block;
+  color: #2e7d32;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #2e7d32;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: #2e7d32;
+  color: white;
+}
+
+/* Book spine effect */
+.page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-book {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .page-content {
+    padding: 15px;
+  }
+
+  .cover-overlay {
+    padding: 15px;
+  }
+
+  .portfolio-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .portfolio-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .experience-item,
+  .project-card,
+  .achievement-card {
+    padding: 1rem;
+  }
+
+  .experience-header h3,
+  .project-header h3,
+  .achievement-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .description,
+  .achievement-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-book {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio-title {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .page-content {
+    padding: 10px;
+  }
+
+  .cover-overlay {
+    padding: 10px;
+  }
+}
