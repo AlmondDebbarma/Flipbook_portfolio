@@ -10,7 +10,8 @@ function Book() {
     {
       id: "about",
       title: "About Me",
-      content: "I love products. That matters."
+      content: "I'm Edmand, currently pursuing my studies at NIT Agartala.\n\nI'm deeply fascinated by products—how they solve problems, impact lives, and scale. My focus lies in building software and unique systems that offer the best possible solutions. I leverage AI to rapidly ideate, build, and test MVPs—turning ideas into functional products in days, not weeks.\n\nI like lifting weights, long rides, writing poetry now trying my hands on lyrics.",
+      image: dpImage
     },
     {
       id: "skills",
@@ -131,6 +132,7 @@ function Book() {
               <h2 className="section-title">{section.title}</h2>
               {section.id === "about" && (
                 <>
+                  <img src={section.image} alt="Profile" className="profile-image" />
                   <div className="section-content">
                     {section.content.split('\n\n').map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>

@@ -9,17 +9,13 @@
 
 body,
 html {
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
   background: #f0f7f4;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  touch-action: pan-y;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 #root {
@@ -77,9 +73,6 @@ html {
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #2e7d32 #f0f7f4;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
 }
 
 .page-content::-webkit-scrollbar {
@@ -225,6 +218,7 @@ html {
   border: 1px solid #c8e6c9;
 }
 
+
 .experience-container,
 .projects-container,
 .achievements-container {
@@ -267,6 +261,7 @@ html {
   margin-bottom: 1rem;
   font-size: 0.95rem;
 }
+
 
 .experience-item:hover,
 .project-card:hover,
