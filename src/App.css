@@ -11,7 +11,7 @@ body,
 html {
   height: 100dvh;
   width: 100dvw;
-  background: #f0f7f4;
+  background: #000000;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -36,14 +36,14 @@ html {
 
 .portfolio-book {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  background: #101010;
   border-radius: 4px;
   max-width: 100%;
   margin: 0 auto;
 }
 
 .page {
-  background: white;
+  background: rgba(211, 209, 209, 0.916);
   padding: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border: none;
@@ -72,7 +72,7 @@ html {
   position: relative;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #2e7d32 #f0f7f4;
+  scrollbar-color: #000000 #f0f7f4;
 }
 
 .page-content::-webkit-scrollbar {
@@ -80,11 +80,11 @@ html {
 }
 
 .page-content::-webkit-scrollbar-track {
-  background: #f0f7f4;
+  background: #000000;
 }
 
 .page-content::-webkit-scrollbar-thumb {
-  background-color: #2e7d32;
+  background-color: #2a7fff;
   border-radius: 3px;
 }
 
@@ -92,7 +92,7 @@ html {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   position: relative;
   display: flex;
@@ -121,7 +121,7 @@ html {
 }
 
 .portfolio-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   color: #ffffff;
   font-weight: 700;
@@ -132,10 +132,10 @@ html {
 
 .portfolio-subtitle {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 400;
-  max-width: 80%;
-  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.803);
+  font-weight: 300;
+  max-width: 100%;
+  line-height: 2;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -148,7 +148,7 @@ html {
 
 .section-title {
   font-size: 1.8rem;
-  color: #2e7d32;
+  color: #180f0f;
   margin-bottom: 1.5rem;
   text-align: center;
   font-weight: 600;
@@ -164,7 +164,7 @@ html {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: #2e7d32;
+  background: #040404;
   border-radius: 2px;
 }
 
@@ -198,7 +198,7 @@ html {
 }
 
 .skill-group h3 {
-  color: #2e7d32;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
@@ -210,12 +210,12 @@ html {
 }
 
 .skill-tag {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: #ffffff;
+  color: #343434;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  border: 1px solid #c8e6c9;
+  border: 1px solid #53dd13;
 }
 
 
@@ -240,11 +240,11 @@ html {
 }
 
 .achievement-header {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .achievement-header h3 {
-  color: #2e7d32;
+  color: #ffffff;
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
 }
@@ -279,14 +279,14 @@ html {
 .experience-header h3,
 .project-header h3,
 .achievement-header h3 {
-  color: #2e7d32;
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  color: #77ca40df;
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .experience-header h4,
 .project-role {
-  color: #666;
+  color: #eb5408;
   font-size: 1rem;
   margin-bottom: 0.3rem;
 }
@@ -345,7 +345,7 @@ html {
 
 .project-link:hover {
   background: #2e7d32;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /* Book spine effect */
@@ -354,7 +354,7 @@ html {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 30px;
+  width: 300px;
   background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
   pointer-events: none;
 }

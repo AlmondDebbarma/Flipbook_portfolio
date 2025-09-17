@@ -10,8 +10,8 @@ function Book() {
     {
       id: "about",
       title: "About Me",
-      content: "I'm Edmand, currently pursuing my studies at NIT Agartala.\n\nI'm deeply fascinated by products—how they solve problems, impact lives, and scale. My focus lies in building software and unique systems that offer the best possible solutions. I leverage AI to rapidly ideate, build, and test MVPs—turning ideas into functional products in days, not weeks.\n\nI like lifting weights, long rides, writing poetry now trying my hands on lyrics.",
-      image: dpImage
+      content: "I love products. That matters. ",
+      
     },
     {
       id: "skills",
@@ -25,9 +25,10 @@ function Book() {
     {
       id: "experience",
       title: "Experience",
+      
       content: [
         {
-          role: "Co-founder",
+          role: "Sales Co-founder",
           company: "fSEO",
           period: "June 10 - Present",
           description: "Helping Early stage startups achieve 10X ROI with fractional SEO consultancy services— now scaling under my leadership with brand positioning, client-acquisition, and scaling 0 to 1.",
@@ -120,7 +121,7 @@ function Book() {
         <div className="page-content cover" style={{ backgroundImage: `url(${dpImage})` }}>
           <div className="cover-overlay">
             <h1 className="portfolio-title">PROOF OF WORK</h1>
-            <p className="portfolio-subtitle">A Flipbook portfolio of Edmand</p>
+            <p className="portfolio-subtitle">A Flipbook Portfolio Of Edmand</p>
           </div>
         </div>
       </div>
@@ -132,7 +133,7 @@ function Book() {
               <h2 className="section-title">{section.title}</h2>
               {section.id === "about" && (
                 <>
-                  <img src={section.image} alt="Profile" className="profile-image" />
+                  
                   <div className="section-content">
                     {section.content.split('\n\n').map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
